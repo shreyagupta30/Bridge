@@ -16,12 +16,12 @@ class gui_control:
     # Moves the Mouse pointer UPWARDS from it's current position, 
     # until 'STOP' keyword is heard. 
     #------------------------------------------------------------------------------------
-    def mouse_up(self,recognizer, src):
+    def mouse_up(self,recognizer, source):
         while True:
             speech_to_txt = ""
             pyautogui.moveRel(0, -1*SLOWER, duration=0.25)
             try:
-                audio = recognizer.listen(src)
+                audio = recognizer.listen(source)
                 speech_to_txt = recognizer.recognize_google(audio).lower()
             except:
                 pass
@@ -37,12 +37,12 @@ class gui_control:
     # Moves the Mouse pointer DOWNWARDS from it's current position, 
     # until 'STOP' keyword is heard. 
     #------------------------------------------------------------------------------------        
-    def mouse_down(self,recognizer, src):
+    def mouse_down(self,recognizer, source):
         while True:
             speech_to_txt = ""
             pyautogui.moveRel(0, 1*SLOWER, duration=0.25)
             try:
-                audio = recognizer.listen(src)
+                audio = recognizer.listen(source)
                 speech_to_txt = recognizer.recognize_google(audio).lower()
             except:
                 pass
@@ -58,12 +58,12 @@ class gui_control:
     # Moves the Mouse pointer LEFTWARD from it's current position, 
     # until 'STOP' keyword is heard. 
     #------------------------------------------------------------------------------------ 
-    def mouse_left(self,recognizer, src):
+    def mouse_left(self,recognizer, source):
         while True:
             speech_to_txt = ""
             pyautogui.moveRel(-1*SLOWER, 0, duration=0.25)
             try:
-                audio = recognizer.listen(src)
+                audio = recognizer.listen(source)
                 speech_to_txt = recognizer.recognize_google(audio).lower()
             except:
                 pass
@@ -79,14 +79,14 @@ class gui_control:
     # Moves the Mouse pointer RIGHTWARD from it's current position, 
     # until 'STOP' keyword is heard. 
     #------------------------------------------------------------------------------------ 
-    def mouse_right(self,recognizer, src):
+    def mouse_right(self,recognizer, source):
         #print("Move mouse right")
         pyautogui.moveRel(100, 0, duration=0.25)
         while True:
             speech_to_txt = ""
             pyautogui.moveRel(1*SLOWER, 0, duration=0.25)
             try:
-                audio = recognizer.listen(src)
+                audio = recognizer.listen(source)
                 speech_to_txt = recognizer.recognize_google(audio).lower()
             except:
                 pass

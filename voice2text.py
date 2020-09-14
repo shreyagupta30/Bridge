@@ -5,13 +5,13 @@ gui = gui_actions.gui_control()
 recognizer = speech_recognition.Recognizer()
 print("\n\nThreshold Value Before calibration:" + str(recognizer.energy_threshold))
 
-with speech_recognition.Microphone() as src:
+with speech_recognition.Microphone(chunk_size=8192) as source:
     while True: 
         try:
-            audio = recognizer.adjust_for_ambient_noise(src)
+            audio = recognizer.adjust_for_ambient_noise(source)
             print("Threshold Value After calibration:" + str(recognizer.energy_threshold))
             print("Please speak:")
-            audio = recognizer.listen(src)
+            audio = recognizer.listen(source)
             speech_to_txt = recognizer.recognize_google(audio).lower()
             print(speech_to_txt)
         except Exception as ex:
@@ -27,7 +27,7 @@ with speech_recognition.Microphone() as src:
     if speech_to_txt == "quit program" or speech_to_txt == "exit program":
         sys.exit()
     elif speech_to_txt == "mouse up" or speech_to_txt == "move up":
-        gui.mouse_up(recognizer, src)
+        gui.mouse_up(recognizer, source)
     elif speech_to_txt == "mouse down" or speech_to_txt == "move down":
         gui.mouse_down()
     elif speech_to_txt == "mouse left" or speech_to_txt == "move left":
