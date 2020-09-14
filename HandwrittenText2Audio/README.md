@@ -37,5 +37,5 @@ It will run the application on http://localhost:5000/
 ![Screenshot](https://user-images.githubusercontent.com/33135343/93141262-81077900-f701-11ea-9976-341204af1ba7.png)
 
 ## Use Cases
-1. Visually impaired people can use computers without any hesitation.
+1. Visually impaired people can attend online classes and can use the handwritten notes later in audio format without any hesitation.
 2. Inclusion of this community in normal schools.
