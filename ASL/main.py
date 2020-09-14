@@ -18,7 +18,6 @@ signs = {'0': 'A', '1': 'B', '2': 'C', '3': 'D', '4': 'E', '5': 'F', '6': 'G', '
 while True:
     ret, frame = cap.read()
 
-    # Lugar de la imagen donde se toma la muestra
     img = frame[20:250, 20:250]
 
     res = cv2.resize(img, dsize=(28, 28), interpolation = cv2.INTER_CUBIC)
@@ -29,7 +28,7 @@ while True:
     res1 = res1.type(torch.FloatTensor)
 
     out = modelo(res1)
-    # Probabilidades
+
     probs, label = torch.topk(out, 25)
     probs = torch.nn.functional.softmax(probs, 1)
 
