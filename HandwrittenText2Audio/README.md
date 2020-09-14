@@ -33,6 +33,8 @@ python3 src/upload.py
 ```
 It will run the application on http://localhost:5000/
 
+## Screenshot
+![Screenshot](https://user-images.githubusercontent.com/33135343/93141262-81077900-f701-11ea-9976-341204af1ba7.png)
 
 ## Use Cases
 1. Visually impaired people can use computers without any hesitation.
