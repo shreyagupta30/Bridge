@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <title>ASL Detector</title>
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(#1976D2, #03A9F4);
+            font-family: 'Baloo Chettan 2', cursive;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main {
+            height: 90vh;
+            /* width: 60vw; */
+            background: #FFFFFF;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+
+        .video {
+            height: 50vh;
+            background: #30257F;
+            border-bottom: 15px solid #171558;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .text {
+            display: flex;
+            padding: 5px 20px;
+        }
+
+        .text > * > .title {
+            font-size: 20px;
+            opacity: 0.7;
+        }
+
+        .text > .left {
+            width: 40%;
+        }
+
+        .text > .left > .content {
+            font-size: 25px;
+        }
+
+        .text > .right > .content {
+            font-size: 35px;
+        }
+
+        img {
+            height: 50vh;
+            margin: auto;
+            border-radius: 5px 5px 0 0;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .video {
+                height: 30vh;
+            }
+
+            img {
+                width: 100vw;
+                max-height: 30vh;
+                border-radius: 0;
+            }
+
+            .main {
+                min-height: 100vh;
+                width: 100vw;
+                border-radius: 0;
+            }
+
+            .text > * > .title {
+                padding: 10px;
+                font-size: 20px;
+                opacity: 0.7;
+                padding: 0;
+                margin: 0;
+            }
+
+            .text > .left > .content {
+                font-size: 20px;
+            }
+
+            .text > .right > .content {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <script>
+        setInterval(function(){ 
+            axios.get('/suggestions')
+            .then(function (response) {
+                const myNode = document.getElementById("sugg-content");
+                myNode.textContent = '';
+                for (var i = 0; i < response.data.length; i++) {
+                    var item = document.createElement('li');
+                    item.appendChild(document.createTextNode(response.data[i]));
+                    document.getElementById('sugg-content').appendChild(item);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }, 1000);
+
+        setInterval(function(){ 
+            axios.get('/sentence')
+            .then(function (response) {
+                console.log(response.data)
+                document.getElementById("sugg-sentence").textContent = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }, 1000);
+
+        document.body.onkeyup = function(e){
+            if(e.keyCode == 13){
+                axios.get('/trigger')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 32){
+                axios.get('/char?character=space')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 49){
+                axios.get('/char?character=1')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 50){
+                axios.get('/char?character=2')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 51){
+                axios.get('/char?character=3')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 52){
+                axios.get('/char?character=4')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else if(e.keyCode == 53){
+                axios.get('/char?character=5')
+                .then(function (response) {
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+        }
+
+        function tts() {
+            var text = document.getElementById("sugg-sentence").innerHTML;
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-US';
+            window.speechSynthesis.speak(speech);
+        }
+
+    </script>
+
+    <div class="container">
+        <div class="main">
+            <div class="video">
+                <img src="{{ url_for('video_feed') }}" >
+            </div>
+            <div class="text">
+                <div class="left">
+                    <p class="title">Suggestions:</p>
+                    <ol class="content" id="sugg-content">
+                        <!-- Dynamically fill top 5 suggested words -->
+                    </ol>
+                </div>
+                <div class="right">
+                    <p class="title">Sentence:</p>
+                    <p class="content" id="sugg-sentence">
+                        <!-- Dynamically fill the completed sentence -->
+                    </p>
+                    <button onclick="tts()">Speak!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
