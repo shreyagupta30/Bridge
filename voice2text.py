@@ -18,12 +18,6 @@ with speech_recognition.Microphone(chunk_size=8192) as source:
             print("Sorry. Could not understand.\n\n")
         continue
             
-    print("I heard : " + speech_to_txt)
-        
-    #---------------------------------------------------------------------
-    # The following if-else block is for the commands I have chosen and 
-    # call their respective GUI action
-    #--------------------------------------------------------------------
     if speech_to_txt == "quit program" or speech_to_txt == "exit program":
         sys.exit()
     elif speech_to_txt == "mouse up" or speech_to_txt == "move up":
