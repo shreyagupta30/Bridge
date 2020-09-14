@@ -1,0 +1,4 @@
+model_checkpoint_path: "snapshot-24"
+all_model_checkpoint_paths: "snapshot-22"
+all_model_checkpoint_paths: "snapshot-23"
+all_model_checkpoint_paths: "snapshot-24"

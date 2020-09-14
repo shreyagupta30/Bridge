@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.css') }}">
+    <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+</head>
+<body>
+    <script>
+            function tts(text) {
+            var text = text;
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-IN';
+            window.speechSynthesis.speak(speech);
+        }
+  </script>
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Congrats!</strong> The file <b></b> is uploaded Sucessful.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <figure class="figure">
+          <img src="{{url_for('static', filename=image_name)}} " class="figure-img img-fluid rounded" alt="Upload Image.">
+          <figcaption class="figure-caption">Upload Photo.</figcaption>
+        </figure>
+        <p class="bg-success">
+            <b>Recognized Text</b><br>
+        </p>
+        <h2>{{resutl}}</h2>
+        %result = {{result}}%
+        <button onclick="tts(result)">Speak!</button>
+    </div>
+</body>
+</html>
