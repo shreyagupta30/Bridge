@@ -2,15 +2,16 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
 
-        self.conv1 = nn.Conv2d(1, 80, kernel_size = 5)
-        self.conv2 = nn.Conv2d(80, 80, kernel_size = 5)
+        self.conv1 = nn.Conv2d(1, 80, kernel_size=5)
+        self.conv2 = nn.Conv2d(80, 80, kernel_size=5)
 
-        self.pool1 = nn.MaxPool2d(kernel_size = 2, stride = 2, padding = 0)
-        self.pool2 = nn.MaxPool2d(kernel_size = 2, stride = 2, padding = 0)
+        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
 
         self.batch_norm1 = nn.BatchNorm2d(80)
         self.batch_norm2 = nn.BatchNorm2d(80)

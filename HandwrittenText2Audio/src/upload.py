@@ -9,7 +9,7 @@ __author__ = 'Shreya'
 
 app = Flask(__name__)
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__)) # project abs path
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # project abs path
 gtts(app)
 
 
@@ -43,7 +43,7 @@ def upload():
             print("File supported moving on...")
         else:
             render_template("Error.html", message="Files uploaded are not supported...")
-        savefname = datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + "."+ext
+        savefname = datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + "." + ext
         destination = "/".join([target, savefname])
         print("Accept incoming file:", filename)
         print("Save it to:", destination)

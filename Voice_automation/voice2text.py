@@ -1,12 +1,13 @@
 import speech_recognition
 import gui_actions
+import sys
 
 gui = gui_actions.gui_control()
 recognizer = speech_recognition.Recognizer()
 print("\n\nThreshold Value Before calibration:" + str(recognizer.energy_threshold))
 
 with speech_recognition.Microphone(chunk_size=8192) as source:
-    while True: 
+    while True:
         try:
             audio = recognizer.adjust_for_ambient_noise(source)
             print("Threshold Value After calibration:" + str(recognizer.energy_threshold))
@@ -17,7 +18,7 @@ with speech_recognition.Microphone(chunk_size=8192) as source:
         except Exception as ex:
             print("Sorry. Could not understand.\n\n")
         continue
-            
+
     if speech_to_txt == "quit program" or speech_to_txt == "exit program":
         sys.exit()
     elif speech_to_txt == "mouse up" or speech_to_txt == "move up":
@@ -38,11 +39,11 @@ with speech_recognition.Microphone(chunk_size=8192) as source:
         gui.open_firefox()
     elif speech_to_txt == "open files":
         gui.open_files()
-    elif speech_to_txt == "mute" or speech_to_txt=="unmute":
+    elif speech_to_txt == "mute" or speech_to_txt == "unmute":
         gui.mute_unmute()
-    elif speech_to_txt == "play" or speech_to_txt=="pause":
+    elif speech_to_txt == "play" or speech_to_txt == "pause":
         gui.play_pause()
-    elif speech_to_txt == "volume up" or speech_to_txt=="sound up":
+    elif speech_to_txt == "volume up" or speech_to_txt == "sound up":
         gui.volume_up()
-    elif speech_to_txt == "volume down" or speech_to_txt=="sound down":
+    elif speech_to_txt == "volume down" or speech_to_txt == "sound down":
         gui.volume_down()

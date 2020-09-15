@@ -24,6 +24,15 @@ This application is an all in one application for all 3 of the mentioned disabli
 1. ***Visual Impaired Mode*** - This mode is for the people who have lost their vision capabilities and have audio/speech abilities. 
 2. ***Sound / Voice Impaired Mode*** - This mode is for the people who have lost the ability to listen or speak or both, and have retained their sight ability.</strong>
 
+## Structure of the repository
+This repository is divided in 4 sub directories
+ 1. [ASL](https://github.com/shreyagupta30/Bridge/tree/master/ASL)
+ 2. [HandwrittenText2Audio](https://github.com/shreyagupta30/Bridge/tree/master/HandwrittenText2Audio)
+ 4. [Speech2Text](https://github.com/shreyagupta30/Bridge/tree/master/Speech2Text)
+ 3. [Voice_automation](https://github.com/shreyagupta30/Bridge/tree/master/Voice_automation)
+
+ `ASL` and `Speech2Text` is under **Visual Impaired Mode** of the Application whereas `HandwrittenText2Audio` and `Voice_automatio` is under **Sound/Voice Impaired Mode**.
+
 ## Installation and Setup
 
 ### Prerequisites
@@ -41,6 +50,7 @@ This application is an all in one application for all 3 of the mentioned disabli
 ## Demo
 
 Demo of the project can be seen [here](https://drive.google.com/file/d/1UTvfl9ob75-Qc54s41XVQ3Gg-rszm9yN/view?usp=sharing)
+
 
 ## Contribution to the project
 
