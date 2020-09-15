@@ -66,9 +66,7 @@ Please follow a systematic Git Workflow -
 ## Future Enhancements
 - [ ] Package all the features together in an Chrome/Firefox extension
 - [ ] Create an electron based Desktop app to make it easy to use over desktop apps
-- [ ] Create a GCP Deployment (both engine and VM) branch
-- [ ] Create a Azure deployment branch
-- [ ] Create a AWS deployment branch
+- [ ] Create a GCP/AWS/Azure Deployment
 
 ## Thank you!
 If you find this project useful, please leave a star on this repo!
