@@ -56,4 +56,4 @@ Each training and test case represents a label (0-25) as a one-to-one map for ea
 ## Use Cases
 
 1. Hearing impaired people can have a common classroom by asking their questions/doubts without any hesitation.
-2. Inclusion of this community in normal schools.
+2. Inclusion of this community in normal schools and well as conventional online classrooms.

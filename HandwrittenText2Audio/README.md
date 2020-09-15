@@ -38,4 +38,4 @@ It will run the application on http://localhost:5000/
 
 ## Use Cases
 1. Visually impaired people can attend online classes and can use the handwritten notes later in audio format without any hesitation.
-2. Inclusion of this community in normal schools.
+2. Inclusion of this community in normal schools and well as conventional online classrooms.

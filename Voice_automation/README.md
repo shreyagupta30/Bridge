@@ -34,7 +34,8 @@ It will run the application in your terminal
 
 ## Demo
 
+![Demo](https://user-images.githubusercontent.com/33135343/93184274-a7590300-f759-11ea-810c-e9b764a3b048.gif)
 
 ## Use Cases
 1. Visually impaired people can use computers without any hesitation.
-2. Inclusion of this community in normal schools.
+2. Inclusion of this community in normal schools and well as conventional online classrooms.
