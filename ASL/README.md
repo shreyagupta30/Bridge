@@ -4,12 +4,6 @@ Hand gestures conversion in 3D space using a single low resolution camera for co
 
 ## Set up on your local system
 
-Make sure you have `pipenv` installed in your system. If not then download using,
-
-```bash
-sudo pip install pipenv
-```
-
 Follow the steps to setup the project
 
 1. Change into the directory
