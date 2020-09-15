@@ -38,6 +38,10 @@ This application is an all in one application for all 3 of the mentioned disabli
 
 *Note: Installation guide of all the applications is in their respective README.*
   
+## Demo
+
+Demo of the project can be seen [here](https://drive.google.com/file/d/1UTvfl9ob75-Qc54s41XVQ3Gg-rszm9yN/view?usp=sharing)
+
 ## Contribution to the project
 
 <div align="center">
