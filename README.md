@@ -2,10 +2,11 @@
 <h1>Bridge</h1>
 
 [![GitHub issues](https://img.shields.io/github/issues/shreyagupta30/Bridge?logo=github)](https://github.com/shreyagupta30/Bridge/issues)
-![Size](https://github-size-badge.herokuapp.com/shreyagupta30/Bridge.svg) ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/shreyagupta30/Bridge)
+![Size](https://github-size-badge.herokuapp.com/shreyagupta30/Bridge.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/torch)
 
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/shreyagupta30/Bridge/blob/master/.pre-commit-config.yaml)
 [![License](https://img.shields.io/github/license/shreyagupta30/Bridge)](https://github.com/shreyagupta30/Bridge/blob/master/LICENSE)
+![Travis (.org)](https://img.shields.io/travis/shreyagupta30/Bridge)
 </div>
 
 <strong> The current time is full of hardship which is taking a toll on everyone's lives.  As a student myself, these time have clearly shown how for granted we take our education system and daily learnings. It is still very convenient for normal people like us. But we hardly think how difficult it would have been for specially-abled people to adapt to this way of living. It can be very intimidating for these people to cope up with this virtual world and most importantly for students that no longer can go to their normal schools and learn in the way there are used to. In order to make it a little less tiresome and more fluent I come up with **Bridge**. Here I am trying to build a complete system that will help them in some way to make this shift easy.
