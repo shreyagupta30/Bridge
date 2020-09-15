@@ -8,7 +8,7 @@ jobs:
   - stage: Tests
     name: Linting Tests
     language: python
-    python: '3.8'
+    python: '3.6'
     cache: pip
     install:
     - pip install pre-commit
