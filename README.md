@@ -5,7 +5,7 @@
 ![Size](https://github-size-badge.herokuapp.com/shreyagupta30/Bridge.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/torch)
 
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/shreyagupta30/Bridge/blob/master/.pre-commit-config.yaml)
-![GitHub](https://img.shields.io/github/license/shreyagupta30/Bridge)
+[![GitHub](https://img.shields.io/github/license/shreyagupta30/Bridge)](https://github.com/shreyagupta30/Bridge/blob/master/LICENSE)
 ![Travis (.org)](https://img.shields.io/travis/shreyagupta30/Bridge)
 </div>
 
