@@ -51,7 +51,7 @@ This repository is divided in 4 sub directories
   
 ## Demo
 
-Demo of the project can be seen [here](https://drive.google.com/file/d/1UTvfl9ob75-Qc54s41XVQ3Gg-rszm9yN/view?usp=sharing)
+Demo of the project can be seen [here](https://youtu.be/TxYUWJJDFUk)
 
 
 ## Contribution to the project
