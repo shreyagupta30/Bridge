@@ -17,13 +17,14 @@
 - Speech/Hearing Impaired people
 
 Bridge's ulitmate aim is to make technology, web surfing, work from home and education in the times of social distancing easier for specially-abled people, and thus enabling them to **brace the world of Covid-19.**
+</strong>
 
 ## Overview and features
 
 This application is an all in one application for all 3 of the mentioned disablities. It has two major modes -
 
 1. ***Visual Impaired Mode*** - This mode is for the people who have lost their vision capabilities and have audio/speech abilities. 
-2. ***Sound / Voice Impaired Mode*** - This mode is for the people who have lost the ability to listen or speak or both, and have retained their sight ability.</strong>
+2. ***Sound / Voice Impaired Mode*** - This mode is for the people who have lost the ability to listen or speak or both, and have retained their sight ability.
 
 ## Structure of the repository
 This repository is divided in 4 sub directories
